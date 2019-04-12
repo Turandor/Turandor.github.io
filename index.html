@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/css.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <title>System Mobilnych Stacji Pogodowych</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <ul class="main-nav">
+                        <li><a href="#about">O projekcie</a></li>
+                        <li><a href="./czujniki.html">Dane z czujników</a></li>
+                        <li><a href="#authors">Autorzy</a></li>
+                        <!--<li><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Zaloguj się</a></li>-->
+                        <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto">Zaloguj się</a></li>
+                        <li><a href="#" onclick="document.getElementById('id02').style.display='block'" style="width:auto">Zarejestruj się</a></li>
+                        <!--<li><a href="#">Zarejestruj się</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Projekt zespołowy systemu mobilnych stacji pogodowych.</h1>
+                <a class="btn btn-full js--scroll-to-sensors" href="#">Sprawdź czujniki</a>
+                <a class="btn btn-ghost js--scroll-to-about" href="#">Szczegóły projektu</a>
+            </div>
+        </header>
+
+        <section class="section-sensors js--section-sensors" id="sensors">
+            <div class="row">
+                <h2>Przeglądaj dane z czujników</h2>
+                <p class="long-copy">
+                    Wybierz urządzenie z którego chcesz wyświetlić dane. 
+                    Aby przeglądać swoje prywatne czujniki ZALOGUJ SIĘ lub ZAJERESTRUJ SIĘ.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-sensors js--section-about" id="about">
+                <div class="row">
+                    <h2>O projekcie</h2>
+                    <p class="long-copy">
+                        Projekt mobilnych stacji pogodowych został wykonany w ramach kursu 
+                        - Projekt Zespołwy - przez studentów Automatyki i Robotyki na wydziale 
+                        elektroniki Politechniki Wrocławskiej. 
+                    </p>
+                    <p class="long-copy">
+                        W jego ramach zaprojektowane zostały urządzenia, mogące przesyłać dane
+                         atmosferyczne na serwer. Możemy je następnie odczytać z poziomu
+                         przeglądarki internetowej. Dodatkowo urządzenia mają dostęp do bazy danych
+                         dzięki której możemy sprawdzać dane z różnych przedziałów czasowych w 
+                         postaci wykresów. Urządzenia dostępne są w dwóch wersjach: Indoor - przeznaczona
+                         do użytku wewnątrz budynków i wyposażona w moduł wifi oraz Outdoor - do użytku 
+                         na zewnątrz wyposażona w moduł GSM oraz wodoodporną obudowę.
+                    </p>
+
+                    <section class="section-sensors" id="authors">
+                        <div class="row">
+                            <h2>Autorzy</h2>
+                            <ul>
+                                <li>Dorian Janiak - Projekt i montaż urządzeń</li>
+                                <li>Bartosz Marczyński - Software urządzenia i serwer</li>
+                                <li>Michał Kuczaj - Baza danych</li>
+                                <li>Paweł Więcław - Backend</li>
+                                <li>Jakub Kaźmierczak - Frontend i projekt strony</li>
+                            </ul>
+                    </div>
+                    </section>
+        </section>
+
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php">
+                  <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="./resources/img/avatar.jpg" alt="Avatar" class="avatar">
+                  </div>
+              
+                  <div class="container">
+                    <label for="uname"><b>Użytkownik</b></label>
+                    <input type="text" placeholder="Nazwa użytkownika" name="uname" required>
+              
+                    <label for="psw"><b>Hasło</b></label>
+                    <input type="password" placeholder="Hasło" name="psw" required>
+                      
+                    <button type="submit">Zaloguj się</button>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Pamiętaj mnie
+                    </label>
+                  </div>
+              
+                  <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Anuluj</button>
+                    <span class="psw"><a href="#">Zapomniałeś hasła?</a></span>
+                  </div>
+                </form>
+            </div>
+
+            <div id="id02" class="modal">
+                    <form class="modal-content animate" action="/action_page.php">
+                      <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="./resources/img/avatar.jpg" alt="Avatar" class="avatar">
+                      </div>
+                  
+                      <div class="container">
+                            <label for="uname"><b>Login</b></label>
+                            <input type="text" placeholder="Nazwa użytkownika" name="uname" required>
+                      
+                            <label for="psw"><b>Hasło</b></label>
+                            <input type="password" placeholder="Hasło" name="psw" required>
+    
+                            <label for="psw"><b>Powtórz hasło</b></label>
+                            <input type="password" placeholder="Powtórz hasło" name="psw" required>
+    
+                            <label for="email"><b>E-mail</b></label>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <button type="submit">Zarejestruj się</button>
+                          </div>
+
+                      <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Anuluj</button>
+                      </div>
+                    </form>
+                </div>
+
+            <footer>
+                <div class="row"> 
+                    <div class="col span-1-of-2">
+                        <ul class="footer-nav">
+                            <li><a href="#">O nas</a></li>
+                            <li><a href="#">cos1</a></li>
+                            <li><a href="#">cos2</a></li>
+                            <li><a href="#">cos3</a></li>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/dorian.janiak"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-reddit"></ion-icon></a></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <p>
+                            Copyright &copy; 2019 by Jakub Kaźmierczak. All rights reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./resources/js/scripts.js"></script>
+    <script src="./vendors/js/jquery.waypoints.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    </body>
+
+</html>
