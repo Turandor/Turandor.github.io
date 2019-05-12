@@ -153,12 +153,38 @@
                         </p>
                     </div>
                 </div>
+                <div class="form">
+                    <fieldset>
+                        <legend>&nbsp;REGISTER&nbsp;</legend>
+                        <form name="register" action="./resources/php/register.php" method="post">
+                            <input name="fname" type="text" placeholder="please enter your first name" required><br />
+                            <input name="lname" type="text" placeholder="please enter your last name" required><br />
+                            <input name="uname" type="text" placeholder="please enter a user name" required><br />
+                            <input name="upassword" type="password" placeholder="please enter a password or passphrase" required><br />
+                            <input name="submit" type="submit" />
+                        </form>
+                    </fieldset>
+                </div>
+                <div class="form">
+                    <fieldset>
+                        <legend>&nbsp;LOGIN&nbsp;</legend>
+                        <form name="login" action="./resources/php/login.php" method="post">
+                            <input name="uname" type="text" placeholder="please enter your user name"><br />
+                            <input name="upassword" type="password" placeholder="please enter your password or passphrase"><br />
+                            <input name="submit" type="submit" />
+                        </form>
+                    </fieldset>
+                </div>
+                <div id="response"></div>
+            
             </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./resources/js/scripts.js"></script>
     <script src="./vendors/js/jquery.waypoints.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <script type="text/javascript" src="./resources/js/functions.js"></script>
+
     </body>
 
 </html>
